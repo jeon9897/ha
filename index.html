@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하림펫푸드 반응형웹</title>
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <link href="./css/base.css" rel="stylesheet" type="text/css">
+
+  <!-- pc서식  -->
+  <link href="./css/pc.css" rel="stylesheet" type="text/css">
+
+  <!-- 태블릿 서식 -->
+  <link href="./css/tablet.css" rel="stylesheet" type="text/css">
+
+  <!-- 모바일 서식 -->
+  <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+
+  <!-- 스와이퍼 슬라이드 서식 -->
+  <link href="./css/swiper.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+  <!-- css3속성 사용시 공급업체 접두가 자동으로 붙여주는 스크립트 소스 -->
+  <script src="./script/prefixfree.min.js"></script>
+
+  <!-- 스와이퍼 슬라이드 스크립트 소스 -->
+  <script src="./script/swiper.js"></script>
+
+</head>
+<body>
+  <input type="checkbox" id="toggle">
+
+  <!-- 헤더영역 시작 -->
+  <header>
+    <div class="header_top">
+      <h1>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo2.png" alt="상단로고">
+        </a>
+      </h1>
+
+       <!-- 장바구니 -->
+       <i class="fas fa-shopping-cart"></i>
+
+      <nav class="lnb">
+        <ul>
+          <li><a href="login.html" title="로그인">로그인</a></li>
+          <li><a href="join.html" title="회원가입">회원가입</a></li>
+          <li><a href="order.html" title="주문조회">주문조회</a></li>
+          <li><a href="cart.html" title="장바구니">장바구니</a></li>
+        </ul> 
+      </nav>
+
+      <fieldset>
+        <legend>검색</legend>
+        <input type="search" id="search" placeholder="이달의 특가 5%">
+        <label for="search" class="fas fa-search"><span>검색버튼</span></label>
+      </fieldset>
+    </div>
+
+    <label for="toggle" class="fas fa-bars"></label>
+
+    <div class="header_bottom">
+      <label for="toggle" class="fas fa-times"></label>
+
+      <nav class="gnb">
+        <ul>
+          <li><a href="sub01.html" title="브랜드">브랜드</a>
+            <ul class="sub">
+              <li><a href="#" title="가장 맛있는 시간 30일">
+                가장 맛있는<br> 시간 30일</a>
+              </li>
+              <li><a href="#" title="더리얼">더리얼</a></li>
+              <li><a href="#" title="밥이보약">밥이보약</a></li>
+            </ul>
+          </li>
+
+          <li><a href="sub02.html" title="정기배송">정기배송</a>
+            <ul class="sub">
+              <li><a href="#" title="DOG">DOG</a></li>
+              <li><a href="#" title="CAT">CAT</a></li>
+            </ul>
+          </li>
+
+          <li><a href="sub03.html" title="DOG">DOG</a>
+            <ul class="sub">
+              <li><a href="#" title="오늘생산배송">오늘생산배송</a></li>
+              <li><a href="#" title="브랜드별">브랜드별</a></li>
+              <li><a href="#" title="연령별">연령별</a></li>
+              <li><a href="#" title="유형별">유형별</a></li>
+              <li><a href="#" title="샘플신청">샘플신청</a></li>
+              <li><a href="#" title="이벤트">이벤트</a></li>
+              <li><a href="#" title="상품후기">상품후기</a></li>
+            </ul>
+          </li>
+
+          <li><a href="sub04.html" title="CAT">CAT</a>
+            <ul class="sub">
+              <li><a href="#" title="오늘생산배송">오늘생산배송</a></li>
+              <li><a href="#" title="브랜드별">브랜드별</a></li>
+              <li><a href="#" title="연령별">연령별</a></li>
+              <li><a href="#" title="유형별">유형별</a></li>
+              <li><a href="#" title="샘플신청">샘플신청</a></li>
+              <li><a href="#" title="이벤트">이벤트</a></li>
+              <li><a href="#" title="상품후기">상품후기</a></li>
+            </ul>
+          </li>
+
+          <li><a href="sub05.html" title="매거진">매거진</a>
+            <ul class="sub">
+              <li><a href="#" title="칼로리 계산기">칼로리 계산기</a></li>
+              <li><a href="#" title="Food&amp;Life">Food&amp;Life</a></li>
+              <li><a href="#" title="#하림펫푸드">#하림펫푸드</a></li>
+              <li><a href="#" title="영양성분">영양성분</a></li>
+              <li><a href="#" title="원료사전">원료사전</a></li>
+              <li><a href="#" title="이벤트">이벤트</a></li>
+            </ul>
+          </li>
+
+          <li><a href="sub06.html" title="우리 이야기">우리 이야기</a>
+            <ul class="sub">
+              <li><a href="#" title="우리이야기">우리이야기</a></li>
+              <li><a href="#" title="우리의약속">우리의약속</a></li>
+              <li><a href="#" title="100% 휴먼그레이드">100% 휴먼그레이드</a></li>
+              <li><a href="#" title="이노베이션">이노베이션</a></li>
+              <li><a href="#" title="제조시설">제조시설</a></li>
+              <li><a href="#" title="반려견 동반">반려견 동반</a></li>
+            </ul>
+          </li>
+
+          <li><a href="sub07.html" title="투어신청">투어신청</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <!-- 콘텐츠영역 시작 -->
+  <main>
+    <article class="slide">
+      <h2>메인슬라이드</h2>
+      <div class="swiper-container main_slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./images/main01.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/main02.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/main03.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/main04.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/main05.jpg" alt=""></div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </article>
+
+    <div class="free_ex">
+      <article>
+        <img src="./images/sns21.jpg" alt="더리얼 밀 리뷰를 부탁해">
+        <div class="free_ex_right">
+          <h2><img src="./images/gold_icon_7.png" alt="free_icon"><br>
+            하림펫푸드 <span class="title_bold">사료 무료체험</span>
+          </h2>
+          <p>오래오래 우리함께 <br> 소중한 반려견 면역력으로 바꾸세요!</p>
+          <a href="#" title="체험하기" class="button">체험하기</a>
+        </div>
+      </article>
+    </div>
+
+    <article class="shop_box">
+      <h2>
+        <img src="./images/order_step_icon_4.png" alt="">
+        <span class="title_bold">하림펫 쇼핑</span>하러가기
+      </h2>
+      <p class="p_center"><a href="#" title="" class="button">바로가기</a></p>
+
+      <!-- 상품목록 -->
+      <ul class="product">
+        <li>
+          <img src="./images/product05.jpg" alt="밥이보약">
+          <div class="info">
+            <h3>[100 휴먼그레이드 밥이 보약]</h3>
+            <p>DOG 탄탄한 성장</p>
+            <P>50g &#x00d7;4</P>
+            <span class="price">판매가 : 15,000원</span>
+          </div>
+        </li>
+
+        <li>
+          <img src="./images/product03.jpg" alt="밥이보약">
+          <div class="info">
+            <h3>[식재료로 만든 리얼푸드 더:리얼]</h3>
+            <p>캣 그레인프리 크런치</p>
+            <P>닭고기 시니어 1kg</P>
+            <span class="price">판매가 : 21,000원</span>
+          </div>
+        </li>
+      </ul>
+
+    </article>
+
+    <div class="story">
+      <article>
+        <div class="story_left">
+          <h2><img src="./images/order_step_icon_1.png" alt="free_icon"><span class="title_bold">하림펫 스토리</span>
+          </h2>
+          <p>소중한 반려견을 위한 <br>하림펫의 다양한 소식을 <br>만나보세요!</p>
+          <a href="#" title="자세히보기" class="button">자세히보기</a>
+        </div>
+        <img src="./images/sns13.jpg" alt="펫푸드게임">
+      </article>
+    </div>
+
+    <!-- 인스타그램 -->
+    <article class="instar">
+      <h2><i class="fab fa-instagram"></i>
+        INSTARGRAM
+        <span class="name">@harimpetfood</span>
+      </h2>
+      <ul>
+        <li><img src="./images/sns01.jpg" alt=""></li>
+        <li><img src="./images/sns11.jpg" alt=""></li>
+        <li><img src="./images/sns14.jpg" alt=""></li>
+        <li><img src="./images/sns17.jpg" alt=""></li>
+        <li><img src="./images/sns18.jpg" alt=""></li>
+        <li><img src="./images/sns19.jpg" alt=""></li>
+        <li><img src="./images/sns20.jpg" alt=""></li>
+        <li><img src="./images/sns23.jpg" alt=""></li>
+        <li><img src="./images/sns24.jpg" alt=""></li>
+        <li><img src="./images/sns25.jpg" alt=""></li>
+        <li><img src="./images/sns02.jpg" alt=""></li>
+        <li><img src="./images/sns26.jpg" alt=""></li>
+      </ul>
+    </article>
+  </main>
+
+  <!-- 푸터영역 시작 -->
+  <footer>
+    <div class="f_top">
+      <nav class="f_nav">
+        <ul class="f_lnb">
+          <li><a href="#" title="개인정보처리방침">개인정보처리방침</a></li>
+          <li><a href="#" title="쇼핑몰약관">쇼핑몰약관</a></li>
+        </ul>
+        <dl>
+          <dt>공지사항</dt>
+          <dd><a href="#" title="지니펫X한국헌혈견협회 '건강한' 밥이보약 상품출시">지니펫X한국헌혈견협회 '건강한' 밥이보약 상품출시</a><span>[2021-03-05]</span></dd>
+        </dl>
+      </nav>
+    </div>
+    
+    <div class="f_info">
+      <dl>
+        <dt>푸터영역 정보</dt>
+        <dd>
+          <h3>주문 및 배송문의</h3>
+          <p class="number">02-2189-6543</p>
+          <p>평일 10:00 ~ 17:00(점심:12시 ~ 13시)</p>
+        </dd>
+        <dd>
+          <h3>고객센터</h3>
+          <p class="number">080-250-2304</p>
+          <p>평일 10:00 ~ 17:00(점심:12시 ~ 13시)</p>
+        </dd>
+        <dd class="sns">
+          <a href="#" title="인스타" class="fab fa-instagram"><span>인스타그램</span></a>
+          <a href="#" title="트위터" class="fab fa-twitter"><span>트위터</span></a>
+          <a href="#" title="페이스북" class="fab fa-facebook-f"><span>페이스북</span></a>
+        </dd>
+        <dd class="siteurl">
+          <label for="family">패밀리사이트</label>
+          <select onchange="siteUrl(this)" id="family">
+            <option value="">Family Site</option>
+            <option value="http://www.naver.com">site1</option>
+            <option value="http://www.daum.net">site2</option>
+            <option value="http://www.daum.net">site3</option>
+            <option value="http://www.daum.net">site4</option>
+          </select>
+        </dd>
+      </dl>
+    </div>
+    <address>
+      <p class="a_info">대전광역시 대덕구 벗꽃길71 ( 평촌동) &#65372; 상호 및 대표자 : (주)한국인삼공사
+        000 &#124;
+        사업자번호 : 000-00-00000 &#124;
+        통신판매업신고번호 : 제0000-대전대덕
+        사업자정보확인 &#124;
+        호스팅서비스 제공자 : (주)한국인삼공사
+        Email : ginipet@kgc.co.kr
+        Copyright&copy;2018 by korea ginseng corp. all rights reserved.</p>
+      <p class="a_pay">구매안전(에스크로)서비스 가입사실 확인
+        고객님은 안전거래를 위해 현금등으로 결제시
+        저희 쇼핑몰에 가입한 KCP의 구매안전서비스를
+        이용하실 수 있습니다.</p>
+    </address>
+
+  </footer>
+
+  <script>
+    var swiper = new Swiper(".main_slide", {
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+      
+      function siteUrl(a){    //사용자가 select태그에서 option을 선택하면 값을 전달받는다.
+      if(a.value!='none'){ //만약에 사용자가 선택목록을 선택하였을 때문 아래 내용을 실행한다.
+        window.open(a.value, '_self'); //사이트 연결을 실행한다.
+        a.value='none'; //값을 초기화한다.
+      }else{            // 그렇지 않으면
+        return;         //실행하지 않는다.
+      }
+    }
+  </script>
+
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          1200: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          0: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+      });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+@media screen and (min-width:1024px) and (max-width:1199px){
+
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+ 
+  header{}
+  header h1{
+    position:relative;
+    left:1%;
+    top:30px !important;
+  }
+  
+  .header_top, .header_bottom, .gnb > ul, .free_ex > article, .shop_box, .story article, .instar, .f_nav, .f_info, address{
+    width:100%;
+  }
+
+  .gnb > ul{
+    justify-content: center;
+  }
+  .gnb > ul > li > a{
+    padding:0px 22px;
+  }
+  .sub{
+    position:absolute;
+  }
+  label[for=toggle]{
+    display:block;
+    position:absolute;
+    top:114px;z-index:10000;
+  }
+  i.fa-shopping-cart{display:none;}
+  
+
+
+  /* 사료무료체험 */
+  @media screen and (min-width:767px) and (max-width:800px) {
+    .free_ex{
+      height:440px;
+    }
+    .free_ex > article > img {
+      width:320px !important;
+      padding:60px 20px 0px 20px;
+    }
+    .free_ex_right{
+      text-align:center;
+      padding-top:20px;
+    }
+    .product{
+      flex-direction: column;
+    }
+    .product > li{
+      width:80%;
+    }
+  }
+
+  .product img{
+    width:280px;
+  }
+
+  .story{
+    height:540px;
+  }
+  .story_left > h2{
+    padding-top:40px;
+  }
+  .story article > img{
+    height:300px;
+    padding:30px 30px 0px 0px;
+  }
+  .story_left{
+    width:55%;
+  }
+
+  /* 인스타그램 */
+  .instar ul{
+    grid-template-columns:repeat(3, 1fr);
+  }
+
+  .instar ul li:nth-child(10), .instar ul li:nth-child(11), .instar ul li:nth-child(12){
+    display:none;
+  }
+
+  /* 푸터영역 */
+  .f_lnb{width:36%;padding-left:1.2%;}
+  .f_nav dl{width:60%;}
+  .f_nav dt{
+    margin:0px;
+    padding-right:20px;
+  }
+  .f_nav dd{width:380px;}
+  .f_info{
+    position:relative;
+    padding:0px 1%;
+  }
+  .f_info > dl .number{
+    font-size:2.3rem;
+  }
+  .sns{
+    position:absolute;
+    width:300px;
+    top:50px;right:-140px;
+  }
+  .siteurl select{
+    transform:translateX(-10px);
+  }
+
+  address > .a_info{
+    width:100%;
+    margin-right:0px;
+    padding:1%;
+    clear:left;
+    box-sizing: border-box;
+  } 
+  address > .a_pay{
+    clear:right;
+    width:100%;
+    padding:1%;
+    box-sizing: border-box;
+  }
+}

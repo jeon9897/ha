@@ -1,0 +1,411 @@
+@charset "utf-8";
+
+/* pc서식 */
+header{
+  height:170px;
+}
+.header_top{
+  width:1200px;
+  margin:0px auto;
+  position:relative;
+}
+.header_top h1{
+  position:relative;
+  top:40px;
+  width:200px;
+}
+.header_top h1 img{width:100%;}
+
+.lnb{
+  position:relative;
+  top: -35px;
+}
+.lnb > ul{
+  display:flex;
+  justify-content:flex-end;
+}
+.lnb > ul > li{
+  margin:0px 10px;
+}
+.lnb > ul > li > a{
+  color:#fff;
+  font-size:13px;
+}
+.lnb > ul > li > a:hover{
+  text-decoration:underline;
+  /* font-weight:bold; */
+}
+
+fieldset{
+  position:absolute;
+  right:0px;top:80px;
+  border:none;
+}
+fieldset > legend{display:none;}
+#search{
+  width:230px;
+  height:30px;
+  border-radius:26px;
+  text-align:center;
+  border:none;
+}
+fieldset > label{
+  transform:translate(-36px, 4px);
+  /* position:absolute;
+  left:-36px;top:4px; */
+  font-size:22px;
+}
+fieldset > label > span{display:none;}
+
+/* gnb서식 */
+.header_bottom{
+  width:100%;
+  height:48px;
+  background-color:rgba(255,255,255,0.97);
+  position:absolute;
+  top:114px;
+  overflow:hidden;
+  transition:0.5s;
+  z-index:1000;
+}
+
+/* pc해상도영역에서만 마우스 오버 설정하기 */
+@media screen and (min-width:1025px) {
+  .header_bottom:hover{
+    height:400px;
+  }
+}
+
+
+.gnb{
+  background-color:#4b4b4b;
+  height:48px;
+}
+.gnb > ul{
+  width:1200px;
+  margin:0px auto;
+  display:flex;
+  justify-content:flex-end;
+}
+.gnb > ul > li{
+  line-height:48px;
+  
+}
+.gnb > ul > li > a{
+  font-size:16px;
+  font-weight:400;
+  color:#fff;
+  border-right:1px solid #ccc;
+  padding:0px 45px;
+}
+.gnb > ul > li > a:hover{
+  text-decoration:underline;
+}
+.gnb > ul > li:last-child > a{
+  border:none;
+  padding-right:0px;
+}
+
+/* 서브메뉴 서식 */
+.sub{text-align:center;}
+.sub a{font-size:14px;}
+.sub a:hover{font-weight:bold;}
+
+/* 메인서식 */
+main{
+  clear:both;
+  overflow:hidden;
+}
+
+.slide{}
+.slide > h2{display:none;}
+.slide img{width:100%;}
+
+.free_ex{
+  width:100%;
+  height:530px;
+  background-color:#E32929;
+}
+.free_ex > article{
+  width:1200px;height:530px;
+  margin:0px auto;
+}
+
+.free_ex > article > img{
+  width:400px;
+  float:left;
+  padding:60px 50px 0px 50px;
+}
+
+.free_ex_right{
+  text-align:center;
+  padding-top:60px;
+}
+.free_ex_right h2{
+  font-size:36px;
+  color:#fff;
+  font-weight: 200;
+  padding-top:30px;
+}
+.free_ex_right h2 img{
+  width:48px;
+}
+.title_bold{
+  font-weight:500;
+}
+.free_ex_right p{
+  color:#fff;
+  font-size:18px;
+  line-height:30px;
+  padding:60px 0px 90px 0px;
+}
+.button{
+  font-size:16px;
+  background-color:#fff;
+  padding:6px 30px;
+  border-radius:2px;
+  transition:0.5s;
+  border:1px solid #ccc;
+}
+.button:hover{
+  background-color:#000;
+  color:#fff;
+}
+
+.p_center{
+  text-align:center;
+}
+
+/* 하림펫 쇼핑박스 */
+.shop_box{
+  clear:left;
+  padding:60px 0px;
+  width:1200px;
+  margin:0px auto;
+}
+
+.shop_box > h2{
+ font-size:36px;
+ text-align:center;
+ padding-bottom:40px;
+}
+.shop_box > h2 img{
+  width:40px;
+}
+
+.product{
+  padding-top:100px;
+  display:flex;
+  justify-content:space-around;
+}
+.product > li{
+  width:50%;
+}
+.product img{
+  width:314px;
+  float:left;
+}
+
+.info{
+  padding-top:60px;
+  font-size:18px;
+}
+.info > h3{
+  font-weight:500;
+  font-size:20px;
+}
+.info > p{
+  line-height:40px;
+}
+.info > .price{
+  display:inline-block;
+  padding-top:70px;
+  font-weight:500;
+  font-size:20px;
+  color:#f00;
+}
+
+/* 하림펫 스토리 */
+.story{
+  width:100%;
+  height:620px;
+  background-color:rgb(240, 240, 240);
+  padding:90px 0px;
+  box-sizing: border-box;
+}
+.story article{
+  width:1200px;
+  margin:0px auto;
+}
+.story article > img{
+  height:434px;
+  float:right;
+}
+.story_left{
+  width:630px;
+  float:left;
+  text-align:center;
+}
+.story_left > h2{
+  padding-top:60px;
+  color:#333;
+  font-size:36px;
+}
+.story_left > h2 img{
+  width:40px;
+  padding-right:5px;
+}
+.story_left > p{
+  font-size:18px;
+  padding:60px 0px;
+  line-height:30px;
+}
+
+/* 인스타그램 */
+.instar{
+  clear:both;
+  width:1200px;
+  margin:70px auto;
+}
+
+.instar > h2{
+  text-align:center;
+  font-size:24px;
+  font-weight:400;
+  margin-bottom:50px;
+}
+.instar > h2 i.fab{padding-right:10px}
+.instar ul{
+  display:grid;
+  padding:10px;
+  grid-gap:10px;
+  grid-template-columns:repeat(4, 1fr);
+  grid-template-rows:repeat(3, 240px);
+}
+.instar ul li{overflow:hidden;}
+.instar ul img{
+  width:100%;
+  object-fit:cover;
+  transition:0.5s;
+}
+.instar ul img:hover{
+  transform:scale(1.2);
+  opacity:0.7;
+}
+.instar .name{
+  font-size:12px;
+  display:block;
+  padding-top:5px;
+}
+
+/* footer서식 */
+footer{
+  clear:both;
+  overflow:hidden;
+  /* height:340px; */
+}
+
+.f_top{
+  background-color:#989898;
+  height:60px;
+}
+.f_nav, .f_info, address{
+  width:1200px;
+  margin:0px auto;
+}
+
+.f_lnb{
+  width:400px;
+  float:left;
+  /* display:flex; */
+  /* display:grid; */
+}
+.f_lnb > li{
+  /* float:left; */
+  display:inline;
+  /* display:inline-block; */
+  margin-right:30px;
+}
+.f_lnb > li > a{
+  line-height:60px;
+  font-weight:bold;
+}
+.f_lnb > li > a:hover{
+  text-decoration:underline;
+}
+.f_nav dl{
+  width:500px;
+  float:right;
+  display:flex;
+  line-height:60px;
+  font-size:13px;
+  color:#ffffff;
+} 
+.f_nav dt{margin-right:16px;}
+.f_nav dd{
+  width:430px;
+}
+.f_nav dd span{float:right;}
+.f_nav dd a{
+  width:276px;
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap; /* 다음줄로 넘기지 않음.*/
+  text-overflow:ellipsis; /* 생략기호 나오게 함. */
+  color:#fff;
+}
+
+.f_info{clear:both;}
+.f_info > dl{
+  display:flex;
+  justify-content: space-between;
+}
+.f_info > dl > dt{
+  display:none;
+}
+.f_info > dl > dd{
+  font-size:18px;
+  color:#ccc;
+  line-height:46px;
+}
+.f_info > dl .number{
+  font-size:50px;
+  font-weight:400;
+  color:#fff;
+}
+.sns, .siteurl{
+  transform:translateY(50px);
+}
+.sns a{
+  color:#fff;
+  font-size:30px;
+  padding:0px 10px;
+}
+.sns span{display:none;}
+.siteurl select{
+  height:40px;
+  width:220px;
+  border-radius:6px;
+  font-size:16px;
+  color:#7e7d7d;
+}
+
+/* 푸터 주소영역 서식 */
+address{
+  border-top:1px solid #ccc;
+  padding-top:10px;
+  margin-top:10px;
+  font-size:16px;
+  color:#ccc;
+  line-height:24px;
+}
+address > .a_info{
+  float:left;
+  width:600px;
+  margin-right:60px;
+}
+
+address > .a_pay{
+  float:left;
+  width:30%;
+}
