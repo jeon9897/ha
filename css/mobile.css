@@ -124,8 +124,9 @@ main .slide img{
   text-align:center;
   height:730px;
 }
+#free_img{transform:translateY(320px);}
 .free_ex_right{
-  padding-top:40px;
+  transform:translateY(-390px);
 }
 .free_ex_right > h2{
   padding-top:14px;
