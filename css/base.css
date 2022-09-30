@@ -1,44 +1,22 @@
 @charset "utf-8";
 
+/* 웹폰트를 사용하여 글꼴 설정한다. */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
 
-/* 모든 페이지에 적용되는 공통서식 */
 body{
-  background-color:#fff;
-  font-family: 'Noto Sans KR', '맑은 고딕', sans-serif;
+  background:#fff;
+  font-family:"Noto Sans KR",Arial, sans-serif;
   font-size:12px;
   color:#333;
 }
 
-a{text-decoration:none;color:#333;}
-
-/* 헤더공통서식 */
-header{
-  background-color:#4B4B4B;
+a{
+  color:#333;
+  text-decoration:none;
 }
 
-/* 푸터공통서식 */
-footer{
-  background-color:#464545;
+
+/* 체크박스, 전체메뉴 아이콘, 카트 아이콘, 닫기버튼 숨기기 */
+input#toggle, label.fa-bars, i.fa-shopping-cart, i.fa-times, label.fa-times{
+  display:none;
 }
-
-.siteurl > label{display:none;}
-
-/* 체크박스와 햄버거 메뉴 숨기기 */
-#toggle, label[for=toggle]{display:none;}
-
-/* 햄버거 메뉴 */
-label[for=toggle]{
-  font-size:30px;
-  padding:10px;
-  color:#fff;
-  position:absolute;
-  right:10px;
-  top:0px;
-  z-index:1000;
-}
-
-/* 햄버거 메뉴 클릭시 header_bottom높이가 커져서 서브메뉴가 나오게 하기 */
-#toggle:checked ~ .header_bottom{height:400px;}
-
-i.fa-times{display:none;}

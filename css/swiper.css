@@ -247,20 +247,38 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: 60px;
-  height: 5px;
+  width: 50px;
+  height: 6px;
   display: inline-block;
   /* border-radius: 100%; */
   background: #000;
   opacity: 0.2;
 }
+
+/* 상품목록 콘트롤 버튼 서식 */
+.dot {
+  text-align:center;
+}
+.dot span{
+  width: 12px;
+  height: 12px;
+  border-radius:50%;
+  background:rgb(77, 75, 75);
+}
+
+@media screen and (max-width:767px) {
+  .dot{
+    transform:translateY(100px);
+  }
+}
+
 button.swiper-pagination-bullet {
   border: none;
   margin: 0;
   padding: 0;
   box-shadow: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
+  -moz-appearance: none;
           appearance: none;
 }
 .swiper-pagination-clickable .swiper-pagination-bullet {

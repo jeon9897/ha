@@ -1,185 +1,279 @@
 @charset "utf-8";
 
+/* 모바일 해상도일 때 적용되는 서식 */
 @media screen and (max-width:767px) {
 
-  /* 가로1200박스만 찾아서 100%로 설정한다. */
-  header, .header_top, .header_bottom, .gnb > ul, .free_ex > article, .shop_box, .story article, .instar, .f_nav, .f_info, address{
+  label.fa-bars, i.fa-shopping-cart, label.fa-times{ display:block; }
+
+/* 1200px크기를 100%로 변경한다. */
+.header_top, .gnb > ul, .free_ex article, .shop, .shop_slide, .story article, .instar, .f_navi, .f_info, address{
+  width:100%;
+}
+
+header{
+  height:60px;
+  position:relative;
+}
+.header_top >h1{
+  position:static; /*본래성격으로 돌아옴.*/
+  text-align:center;
+  width:130px;
+  margin:0px auto;
+  padding-top:5px;
+}
+.header_top > h1 img{width:100%;}
+
+/* 전체메뉴 아이콘 서식 */
+label.fa-bars, i.fa-shopping-cart{
+  color:rgb(252, 252, 252);
+  font-size:1.6rem;
+  position:absolute;
+  top:20px;
+}
+label.fa-bars{
+  left:20px;
+}
+/* 장바구니 아이콘 서식 */
+i.fa-shopping-cart{
+  right:20px;
+}
+
+/* 내비게이션 서식 */
+/* lnb서식 */
+.lnb{
+  width:100%;left:-100%; /*쑤니, 동물병원, 스타벅스 */
+  position:fixed;top:540px;
+  z-index:1000;
+  transition:0.5s;
+}
+.lnb > ul{  
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.lnb > ul > li{
+  width:44%;
+  margin:0px 2px 4px 2px;
+  background:rgb(94, 94, 94);
+  text-align:center;
+}
+.lnb > ul > li > a{
+  display:block;
+  line-height:40px;
+}
+.lnb > ul > li > a:hover{text-decoration:none;}
+.header_bottom{background:none;}
+
+/* 닫기버튼 서식 */
+label.fa-times{
+  color:#fff;
+  position:fixed;
+  left:-100%;top:30px;
+  font-size:2.3rem;
+  padding:10px;
+  z-index: 100;
+  transition:0.5s;
+}
+.gnb{
+  position:fixed;
+  width:100%;height:100%;
+  top:0px;left:-100%;
+  transition:0.5s;
+  padding:120px 4% 0px 4%;
+  background:rgba(0,0,0,.8);
+  box-sizing:border-box;
+}
+.gnb > ul{
+  flex-direction: column;
+}
+.gnb > ul > li{
+  border-bottom:1px solid #ccc;
+  text-align:left;
+  padding:0px 2%;
+}
+.gnb > ul > li > a::after{display:none;}
+.sub{display:none;}
+
+/* 검색창 서식 */
+.header_top > fieldset{
+  position:fixed;
+  z-index:1000;
+  width:100%;
+  left:-100%; /*쑤니, 동물병원, 스타벅스 */
+  transition:0.5s;
+}
+
+/* 전체메뉴를 클릭시 체크박스에 체크가 되면 .gnb,  fieldset, i.fa-times, .lnb 의 위치가 left:0%되게하기 */
+#toggle:checked + header .header_top > .lnb{left:0%;}
+#toggle:checked + header .header_top > fieldset{left:25%;}
+#toggle:checked + header .header_bottom > label.fa-times{left:90%;}
+#toggle:checked + header .header_bottom > .gnb{left:0%;}
+
+/* 메인콘텐츠서식  */
+main .slide img{
+  height:400px;
+  object-fit:cover;/*이미지 크기 비율을 높이기준으로 맞춤 (가로가 짤림)*/
+}
+.free_ex article > h2 + img{
+  max-width:320px;
+  float:none;
+  padding-left:2.1%;
+}
+
+/* 하림펫푸드 사료 무료체험 */
+.free_ex{
+  text-align:center;
+  height:730px;
+}
+.free_ex_right{
+  padding-top:40px;
+}
+.free_ex_right > h2{
+  padding-top:14px;
+  font-size:2rem;
+}
+.free_ex_right p{
+  padding-bottom:50px;
+  font-size:1.2rem;
+}
+
+/* 하림펫 쇼핑하러 가기 서식 */
+.shop{padding:30px 0px 120px 0px;}
+.shop > h2{font-size:2rem;}
+.shop > h2 img{width:34px;}
+.p_center{margin-bottom:70px;}
+.shop_slide ul{padding:0px;}
+.swiper-slide > ul > li{
+  text-align:center;
+}
+.shop_slide .swiper-slide img{
+  float:none;
+  width:220px;
+}
+
+/* 상품상세정보 서식 */
+.info{
+  font-size:0.9rem;
+  transform:none;
+}
+.info> h3{font-size:1rem;}
+.info > p {line-height:180%;}
+.info > .price{
+  padding-top:20px;
+  font-size:1rem;
+}
+
+/* 하림펫 스토리 서식 */
+.story{
+  text-align:center;
+  padding-bottom:130px;
+  /* height:620px; */
+}
+.story article h2{
+  font-size:2rem;
+  padding-top:60px;
+  padding-bottom:40px;
+}
+.story_left{
+  width:100%;
+  float:none;
+  text-align:center;
+}
+.story .s_img{
+  float:none;
+  padding:70px 0px 0px 0px;
+}
+.story img{
+  max-width:320px;
+  padding-left:2.1%;
+}
+.story_left p{
+  font-size:1rem;
+  line-height:180%;
+  padding-bottom:50px;
+}
+
+/* 인스타그램 갤러리 */
+  .instar{
+    padding:60px 0px 30px 0px;
+  }
+  .instar > h2{
+    font-size:1.8rem;
+  }
+  .id_name{
+    font-size:1rem;
+  }
+  .gallery{
+    width:100%;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows:repeat(3, 170px);
+  }
+  .gallery li:not([class=m]){
+    display:none;
+  }
+
+  /* 푸터서식 */
+  footer{ height:650px; }
+  .f_nav, .f_info, address{
     width:100%;
   }
+  .f_top{
+    height:100px;
+  }
+  .f_lnb{width:50%;margin:0px auto;}
+  .f_lnb > li > a{color:#fff;}
+  .f_lnb > li:first-child a::after{display:none; }
 
-  header{
-    height:60px;
-    position:relative;
-  }
-  .header_top h1{
-    width:100%;
-    margin:0px auto;
-    position:static; /*본래성격으로 돌아옴.*/
-    width:129px;
-    padding-top:4px;
-  }
-
-  .fa-shopping-cart{
-    display:block;
-    color:rgb(252, 252, 252);
-    font-size:1.6rem;
-    position:absolute;
-    right:20px;top:20px;
-  }
-
-  .header_bottom{
-    left:-100%;
-  }
-
-  label.fa-bars{
-    display:block;
-    position:absolute;
-    top:9px !important;
-    left:10px !important;
-    color:rgb(252, 252, 252);
-    font-size:1.6rem;
-  }
-
-  .gnb{
-    width:100%;
-    height:100%;
-    padding:150px 4% 0px 4%;
-    box-sizing: border-box;
-    background-color:rgba(0,0,0,.9);
-    position:fixed;
-    top:0px;
-    left:-100%; /* 숨기기 */
-    z-index:1000;
-    transition:0.5s;
-  }
-  .gnb a{color:#ccc;}
-  .gnb > ul{
-    flex-direction:column;
-  }
-  .gnb > ul > li{
-    border-bottom:1px solid rgb(153, 153, 153);
-  }
-  .gnb > ul > li > a{border:none;}
-  .sub{display:none;}
-
-  /* 닫기버튼 */
-  label.fa-times{
-    display:inline-block;
-    position:fixed;
-    z-index:1003;
-    left:-60px;
-    top:30px;
-    font-size:2.3rem;
-    color:#fff;
-    padding:10px;
-    cursor:pointer;
-    transition:0.5s;
-  }
-/* 검색박스 숨기기 */
-  fieldset{
-    position:fixed;
-    width:80%;
-    left:-100%;
-    z-index:1001;
-    transition:0.5s;
-  }
-
-  .lnb{
-    width:100%;
-    position:fixed;
-    z-index:1001;
-    top:530px;
-    left:-100%; /* 숨기기 */
-    transition:0.5s;
-  }
-  .lnb > ul{
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .lnb > ul > li{
-    width:44%;
-    text-align:center;
-    margin:0px 2px 4px 2px;
-    background-color:rgb(112, 112, 112);
-  }
-  .lnb > ul > li a{
-    line-height:40px;
-  }
-
-  main .slide img{
-    height:600px;
-    object-fit:cover; /* 이미지 높이를 기준으로 보여줌 */
-    /* object-fit:contain; 이미지 가로가 기준 */
-  }
-
-  /* 햄버거메뉴를 클릭하면 .lnb, fieldset, .gnb 모두 날아오게 하기 */
-  #toggle:checked ~ header > .header_top .lnb{left:0px;}
-  #toggle:checked ~ header > .header_top fieldset{left:20%;}
-  #toggle:checked ~ header > .header_bottom .gnb{left:0px;}
-  #toggle:checked ~ header > .header_bottom .fa-times{left:90%;}
-
-/* 사료무료체험 */
-  .free_ex{
-    height:845px;
-  }
-
-  .free_ex_right{
-    position:relative;
-    top:-390px;
-  }
-  .free_ex > article > img{
-    position:relative;
-    top:350px;
-    width:390px;
-    padding:30px 10px 0px 13px;
-  }
-
-  /* 하림펫쇼핑하기 */
-  .product{
-    width:160%;
-    flex-direction:row;
-    overflow:hidden;
-  }
-  .product > li{
-    width:80%;
-    text-align:right;
-  }
-  .product img{
-    width:200px;
-  }
-  .product .price{
-    padding-top:20px;
-  }
-
-  /* 하림펫 스토리영역 */
-  .story{
-    width:100%;
-    height:810px;
-  }
-  .story_left{
-    width:100%;
-    clear:left;
-  }
-  .story_left > h2{
-    padding-top:10px;
-  }
-
-  .story article{
-    text-align:center;
-  }
-  .story article > img{
-    max-width:380px;
-    height:auto;
+  /* width: calc(100% - 80px); */
+  .f_nav dl{
     float:none;
-    padding-top:30px;
+    width:80%;
+    display:inline-block;
+    transform:translateY(-8px);
+    line-height:170%;
+    font-size:0.75rem;
+    margin-left:12%;
+  }
+  .f_nav dd a{width:70%;}
+  .f_nav dd span{position:relative;top:-5px;}
+  .sns, .siteurl{
+    width:100%;
+    transform:translateY(20px);
   }
 
-  /* 인스타그램 */
-  .instar ul{
-    grid-template-columns:repeat(2, 1fr);
-    grid-template-rows:repeat(3, 145px);
+  /* 푸터정보서식 */
+  .f_info{
+    padding-top:10px;
+    height:280px;
   }
-  .instar ul li{object-fit:cover;}
-  .instar ul li:nth-child(even){display:none;}
+  .f_info dl{
+    flex-wrap:wrap;
+  }
+  .f_info dd{
+    width:64%;
+    font-size:0.95rem;
+    line-height:190%;
+  }
+  .f_info dd h3{font-weight:normal;}
+  .number{
+    font-size:1.4rem;
+    font-weight:400;
+  }
+  .sns a{font-size:1.6rem;}
+  address{
+    padding:0px 4%;
+    box-sizing: border-box;
+  }
+  footer address > .a_info{
+    width:100%;
+    float:none;
+    margin-right:0px;
+  }
+  .a_info a{color:#fff;}
+  footer address > .a_pay{
+    float:none;
+    width:100%;
+    padding-top:18px;
+  }
+
 
 }

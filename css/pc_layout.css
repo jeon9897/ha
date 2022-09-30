@@ -1,0 +1,449 @@
+@charset "utf-8";
+
+/* 상단헤더서식 */
+header{
+  height:170px;
+  background:#4B4B4B;
+}
+.header_top{
+  width:1200px;
+  margin:0px auto;
+  position:relative;
+}
+.header_top > h1{
+  position:relative;
+  top:40px;
+  width:200px;
+}
+.header_top > h1 img{width:100%;}
+
+.lnb{
+  transform:translateY(-35px);
+}
+.lnb > ul{
+  display:flex;
+  justify-content: flex-end;
+}
+.lnb > ul > li{
+  margin:0px 10px;
+}
+.lnb > ul > li > a{
+  color:#fff;
+  font-size:13px;
+}
+.lnb > ul > li > a:hover{
+  text-decoration:underline;
+}
+/* 검색폼 서식 */
+.header_top > fieldset{
+  position:absolute;
+  right:0px;top:80px;
+  border:none;
+}
+fieldset > legend{display:none;}
+fieldset #search{
+  width:230px;height:30px;
+  border-radius:26px;
+  text-align:center;
+  border:none;
+}
+label.fa-search{
+  font-size:22px;
+  transform:translate(-36px, 4px);
+}
+.fa-search span{display:none;}
+
+/* 헤더 bottom서식 */
+.header_bottom{
+  width:100%;
+  height:48px;
+  background-color:rgba(255,255,255,0.9);
+  position:absolute;
+  top:122px;
+  z-index:100; /* 메인슬라이드보다 위로 올라오게 */
+  overflow:hidden; /* 해당하는 영역을 벗어난 콘텐츠는 숨긴다. = 서브메뉴 숨겨진다.*/
+  transition:0.5s;
+}
+.header_bottom:hover{
+  height:480px;
+}
+/* 메인메뉴 서식 */
+.gnb{
+  background:#4B4B4B;
+  height:48px;
+}
+.gnb > ul{
+  width:1200px;
+  margin:0px auto;
+  display:flex;
+  justify-content:flex-end;
+}
+.gnb > ul > li{
+  line-height:48px;
+  /* margin-right:10px; */
+  text-align:center;
+  position:relative; /* 서브메뉴의 기준 */
+  padding:0px 40px;
+}
+.gnb > ul > li > a{
+  color:#fff;
+  font-size:16px;
+  font-weight:400;
+  text-transform:uppercase;
+  /* border-right:1px solid #ccc; */
+}
+.gnb > ul > li > a::after{
+  width:1px;height:10px;
+  background:#ccc;
+  content:"";
+  display:block;
+  position:relative;top:-28px;
+}
+.gnb > ul > li:first-child > a::after{left:80px;}
+.gnb > ul > li:nth-child(2) > a::after{left:97px;}
+.gnb > ul > li:nth-child(3) > a::after{left:64px;}
+.gnb > ul > li:nth-child(4) > a::after{left:60px;}
+.gnb > ul > li:nth-child(5) > a::after{left:84px;}
+.gnb > ul > li:nth-child(6) > a::after{left:120px;}
+.gnb > ul > li:last-child > a::after{display:none;}
+
+.gnb > ul > li > a:hover{}
+
+/* 서브메뉴서식  */
+.sub{
+  position:absolute;
+  width:100%;
+  left:0px;
+}
+.sub > li{}
+.sub > li > a{
+  font-size:14px;
+}
+.sub > li > a:hover{
+  text-decoration:underline;
+}
+
+
+/* 메인서식 */
+main{}
+.slide{}
+.slide > h2{display:none;}
+.slide img{width:100%;}
+
+/* 하림펫푸드 사료 무료체험 */
+.free_ex{
+  width:100%;
+  height:530px;
+  background:#E32929;
+}
+
+.free_ex article{
+  height:500px;
+  padding:15px 0px;
+  width:1200px;
+  margin:0px auto;
+}
+.free_ex article > h2{
+  display:none;
+}
+
+.free_ex article > h2 + img{
+  float:left;
+  width:430px;
+  padding: 30px 0px 0px 120px;
+}
+.free_ex_right{
+  text-align:center;
+  padding-top:60px;
+}
+.free_ex_right > h2{
+  font-size:36px;
+  color:#fff;
+  font-weight:200;
+  padding-top:30px;
+  padding-bottom:16px;
+}
+.free_ex_right p{
+  color:#fff;
+  font-size:18px;
+  line-height:30px;
+  padding-bottom:90px;
+}
+.free_ex_right img{padding-bottom:10px;}
+
+.button{
+  font-size:16px;
+  background:#fff;
+  padding:6px 30px;
+  border:1px solid #ccc;
+  transition:0.5s;
+}
+.button:hover{
+  color:#fff;
+  background:#333;
+}
+
+/* 하림펫 사료 쇼핑서식 */
+.shop{
+  width:1200px;
+  margin:0px auto;
+  padding:60px 0px;
+  overflow:hidden;
+}
+
+.shop > h2{
+  font-size:36px;
+  text-align:center;
+  padding:20px 0px 60px 0px;
+  font-weight:200;
+}
+.shop > h2 img{
+  width:40px;
+  padding-right:10px;
+  transform:translateY(8px);
+}
+.p_center{
+  text-align:center;
+  margin-bottom:130px;
+}
+
+/* 스와이퍼 슬라이드 - 상품목록 */
+.shop_slide{
+  width:1200px;
+  position:relative; /* 부모 - 콘트롤버튼의 기준 */
+}
+.shop_slide .swiper-slide{
+  height:400px;
+}
+.shop_slide .swiper-slide img{
+  width:300px;
+  float:left;
+}
+.swiper-slide > ul{
+  /* width:100%; */
+  padding:0px 30px;
+  box-sizing:border-box; /* 가로 100보다 초과되지 않게 */
+  display:flex;
+}
+.swiper-slide > ul > li{
+  width:50%;
+}
+
+/* 상품상세정보 서식 */
+.info{
+  padding-top:40px;
+  font-size:18px;
+  transform:translateX(20px);
+}
+.info> h3{
+  font-weight:500;
+  font-size:18px;
+}
+.info > p {line-height:40px;}
+.info > .price{
+  padding-top:50px;
+  font-weight:500;
+  font-size:18px;
+  color:#f00;
+  display:inline-block;
+  /* position:relative;top:70px; */
+}
+.info p:last-of-type{
+  padding:30px 0px 0px 0px;
+}
+
+/* 스토리 서식 */
+.story{
+  background:#f0f0f0;
+  height:620px;
+}
+.story article{
+  width:1200px;height:590px;
+  padding:15px 0px;
+  margin:0px auto;
+}
+.story article h2{
+  font-size:36px;
+  color:#333;
+  font-weight:200;
+  padding-top:120px;
+  padding-bottom:60px;
+}
+.story article h2 img{
+  width:40px;
+  padding-right:10px;
+}
+.story .s_img{
+  float:right;
+  width:430px;
+  padding: 70px 120px 0px 0px;
+}
+.story_left{
+  width:650px;
+  float:left;
+  text-align:center;
+}
+.story_left p{
+  font-size:18px;
+  line-height:30px;
+  padding-bottom:90px;
+}
+
+/* 인스타그램 갤러리 */
+.instar{
+  width:1200px;
+  margin:0px auto;
+  padding:90px 0px 50px 0px;
+}
+.instar > h2{
+  text-align:center;
+  text-transform:uppercase;
+  font-size:30px;
+  font-weight:200;
+  margin-bottom:40px;
+}
+.instar > h2 > img{
+  transform: translateY(9px);
+  padding-right:10px;
+}
+.id_name{
+  text-transform:lowercase;
+  font-size:18px;
+  display:block;
+  padding:10px 0px;
+}
+
+/* 그리드 레이아웃 */
+.gallery{
+  width:1000px;
+  margin:0px auto;
+  display:grid;
+  padding:10px;
+  grid-gap:10px;
+  box-sizing: border-box;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows:repeat(3, 200px);
+}
+.gallery > li{overflow:hidden;}
+.gallery > li img{
+  width:100%;
+  object-fit:cover;/* 비율에 맞춰 이미지 표시함 */
+  transition:0.3s;
+}
+.gallery > li img:hover{
+  opacity:0.7;
+  transform:scale(1.1);
+}
+
+/* 푸터서식 */
+footer{
+  background:#464545;
+  height:360px;
+}
+.f_top{
+  background:#989898;
+  height:60px;
+}
+.f_nav, .f_info, address{
+  width:1200px;
+  margin:0px auto;
+}
+.f_lnb{
+  display:flex;
+  width:260px;
+  justify-content: space-around;
+}
+.f_lnb > li{
+  position:relative;
+}
+.f_lnb > li > a{
+  line-height:60px;
+  font-weight:bold;
+}
+.f_lnb > li > a:hover{
+  text-decoration:underline;
+}
+.f_lnb > li:first-child a::after{
+  content:"";
+  display:block;
+  width:1px;
+  height:10px;
+  background:rgb(61, 61, 61);
+  position:absolute;
+  top:26px;left:110px;
+}
+
+.f_nav dl{
+  width:500px;
+  float:right;
+  /* position:absolute;
+  right:0px; */
+  display:flex;
+  transform:translateY(-37px);
+  font-size:13px;
+  color:#fff;
+}
+.f_nav dt{margin-right:16px;}
+.f_nav dd a{
+  width:270px;
+  display:inline-block;
+  overflow:hidden; /*영역을 벗어난 글자 숨기기 */
+  text-overflow: ellipsis;/* 생략기호 나오게 하기 */
+  white-space:nowrap; /* 다음줄로 넘기지 않기 */
+  color:#fff;
+}
+
+/* 푸터정보 서식 */
+.f_info{
+  clear:right;
+  height:144px;
+}
+.f_info dl{
+  display:flex; /* 자식요소인 dd를 가로방향으로 배치한다. */
+  justify-content:space-around; /* 좌, 우간격을 알아서 비율로 배정하여 넒힘. */
+}
+.f_info dt{display:none;}
+.f_info dd{
+  font-size:18px;
+  color:rgb(233, 232, 232);
+  line-height:46px;
+}
+.number{
+  font-size:40px;
+  font-weight:400;
+  color:#fff;
+}
+.sns a{
+  color:#fff;
+  font-size:30px;
+  padding:0px 10px;
+}
+.sns span, .siteurl label{display:none;}
+.sns, .siteurl{
+  transform:translateY(50px);
+}
+
+/* 패밀리 사이트이동하기 서식 */
+.siteurl select{
+  height:40px;  width:220px;
+  border-radius:6px;
+  font-size:16px;
+  color:#7e7d7d;
+}
+
+/* 푸터 주소영역 서식 */
+footer address{
+  border-top:1px solid #ccc;
+  padding-top:10px;
+  margin-top:10px;
+  font-size:13px;
+  color:#ccc;
+  line-height:24px;
+}
+footer address > .a_info{
+  float:left;width:600px;
+  margin-right:60px;
+}
+footer address > .a_pay{
+  float:left;width:300px;
+}
